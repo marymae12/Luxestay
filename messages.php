@@ -238,7 +238,7 @@ $chatUsers = $stmt->fetchAll();
     function fetchMessages() {
         if (!selectedUserId) return;
 
-        fetch(`api_chat.php?action=fetch&other_id=${selectedUserId}`)
+        fetch(`api_messages.php?action=fetch&other_id=${selectedUserId}`)
             .then(res => res.json())
             .then(data => {
                 const container = document.getElementById('chat-messages');
@@ -279,7 +279,7 @@ $chatUsers = $stmt->fetchAll();
         const message = input.value.trim();
 
         if (message) {
-            fetch('api_chat.php?action=send', {
+            fetch('api_messages.php?action=send', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

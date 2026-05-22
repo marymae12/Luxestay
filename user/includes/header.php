@@ -31,7 +31,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 <a href="index.php"       class="<?php echo $currentPage==='index.php'    ?'active':''; ?>">My Account</a>
                 <a href="rooms.php"       class="<?php echo $currentPage==='rooms.php'    ?'active':''; ?>">Find a Room</a>
                 <a href="bookings.php"    class="<?php echo $currentPage==='bookings.php' ?'active':''; ?>">My Bookings</a>
-                <a href="chat.php"        class="<?php echo $currentPage==='chat.php'     ?'active':''; ?>">Chat with Admin</a>
+                <a href="messages.php"    class="<?php echo $currentPage==='messages.php' ?'active':''; ?>">Chat with Admin</a>
                 <a href="../logout.php" style="color: var(--accent);">Logout</a>
             </div>
         </nav>

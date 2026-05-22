@@ -23,7 +23,7 @@ check_login();
                 <a href="index.php">Dashboard</a>
                 <a href="rooms.php">Rooms</a>
                 <a href="bookings.php">Bookings</a>
-                <a href="chat.php">Messages</a>
+                <a href="messages.php">Messages</a>
                 <a href="logout.php" style="color: var(--accent-color);">Logout</a>
             </div>
         </nav>

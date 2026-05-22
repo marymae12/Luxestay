@@ -60,7 +60,7 @@ $activeCount = (int)$stmt->fetchColumn();
         </div>
     </a>
 
-    <a href="chat.php" style="text-decoration:none;">
+    <a href="messages.php" style="text-decoration:none;">
         <div class="glass-panel stat-card" style="padding:1.8rem; text-align:left; position:relative; overflow:hidden;">
             <h3 style="font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:6px; text-transform:none; letter-spacing:0;">Chat with Admin</h3>
             <p style="font-size:0.88rem; color:var(--muted); text-transform:none; letter-spacing:0; margin-bottom:0;">Have questions? Our team is ready to assist you.</p>
@@ -78,7 +78,7 @@ $activeCount = (int)$stmt->fetchColumn();
             <h3 style="font-family:var(--font-display); font-size:1.4rem; color:var(--text); margin-bottom:6px;">Special Offers &amp; Packages</h3>
             <p style="color:var(--muted); font-size:0.9rem;">Exclusive weekend getaway packages available. Contact the front desk for details.</p>
         </div>
-        <a href="chat.php" class="btn btn-primary" style="white-space:nowrap; flex-shrink:0;">Ask About Offers</a>
+        <a href="messages.php" class="btn btn-primary" style="white-space:nowrap; flex-shrink:0;">Ask About Offers</a>
     </div>
 </div>
 

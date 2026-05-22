@@ -148,7 +148,7 @@
     let firstLoad = true;
 
     function fetchMessages(forceScroll = false) {
-        fetch('../api_chat.php?action=fetch')
+        fetch('../api_messages.php?action=fetch')
             .then(res => res.json())
             .then(data => {
                 if (data.messages) {
@@ -224,7 +224,7 @@
         // Hide assistant when user manually sends any message
         showAssistant = false;
 
-        fetch('../api_chat.php?action=send', {
+        fetch('../api_messages.php?action=send', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: message })

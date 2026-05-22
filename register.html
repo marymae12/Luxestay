@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,4 +76,83 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - LuxeStay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-panel login-card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Create Account</h2>
+
+        <div id="error-msg"
+            style="display: none; background: rgba(231, 76, 60, 0.2); color: #c0392b; padding: 10px; border-radius: 6px; margin-bottom: 15px; text-align: center;">
+        </div>
+
+        <div id="success-msg"
+            style="display: none; background: rgba(46, 204, 113, 0.2); color: #27ae60; padding: 10px; border-radius: 6px; margin-bottom: 15px; text-align: center;">
+        </div>
+
+        <form method="POST" action="register.php">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" required minlength="4">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" required minlength="6">
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" required minlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+        </form>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="login.html" style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;">Already
+                have an account? Log in</a>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        const success = urlParams.get('success');
+
+        if (error) {
+            const errorDiv = document.getElementById('error-msg');
+            errorDiv.textContent = decodeURIComponent(error);
+            errorDiv.style.display = 'block';
+        }
+
+        if (success) {
+            const successDiv = document.getElementById('success-msg');
+            successDiv.textContent = decodeURIComponent(success);
+            successDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+>>>>>>> 665f4a3a3c4c4205492a17f248bce813b22a689e
 </html>
