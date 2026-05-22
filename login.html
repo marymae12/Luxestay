@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LuxeStay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-panel login-card">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">LuxeStay Login</h2>
+
+        <!-- Error Message Container (Hidden by default, shown via JS if URL param exists) -->
+        <div id="error-msg"
+            style="display: none; background: rgba(231, 76, 60, 0.2); color: #c0392b; padding: 10px; border-radius: 6px; margin-bottom: 15px; text-align: center;">
+        </div>
+
+        <form method="POST" action="login.php">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="register.html"
+                style="color: var(--primary-color); text-decoration: none; font-size: 0.9rem;">Create an account</a>
+        </div>
+
+    </div>
+
+    <script>
+        // Check for error in URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            const errorDiv = document.getElementById('error-msg');
+            errorDiv.textContent = decodeURIComponent(error);
+            errorDiv.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
